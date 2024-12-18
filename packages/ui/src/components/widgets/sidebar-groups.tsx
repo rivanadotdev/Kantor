@@ -45,10 +45,10 @@ export const SidebarGroups = (props: { menu: SidebarGroupMenuProps[] }) => {
   return (
     <>
       {props.menu.map((item, index) => {
-        if (item.type == "separator") return <SidebarSeparator />;
+        if (item.type == "separator") return <SidebarSeparator key={`sidebar-menu-separator-${index}`} />;
         if (item.isCollapsible)
-          return <CollapsibleSidebarGroup {...item} index={index} />;
-        return <DefaultSidebarGroup {...item} index={index} />;
+          return <CollapsibleSidebarGroup key={`sidebar-menu-group-${index}`} {...item} index={index} />;
+        return <DefaultSidebarGroup {...item} index={index} key={`sidebar-menu-group-${index}`} />;
       })}
     </>
   );

@@ -1,5 +1,5 @@
 import { AvatarProps } from "./avatar-props";
-import { DropdownMenuProps } from "./dropdown-menu-props";
+import { DropdownMenuProps } from "./dropdown-menu-group-props";
 
 export type SidebarUserProps = {
   email: string;

@@ -1,10 +1,6 @@
 import {
-  BadgeCheck,
-  Bell,
   ChevronsUpDown,
-  CreditCard,
-  LogOut,
-  Sparkles,
+  LogOut
 } from "lucide-react";
 
 import { getInitials } from "@/libs/get-initials";
@@ -12,11 +8,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "../atoms/avatar";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger
 } from "../atoms/dropdown-menu";
 import {
   SidebarMenu,
@@ -25,6 +20,7 @@ import {
   useSidebar,
 } from "../atoms/sidebar";
 import { SidebarUserProps } from "../types/sidebar-user-props";
+import { DropdownMenuGroup } from "./dropdown-menu-groups";
 
 // Component for user info display in dropdown
 const UserInfo = (props: SidebarUserProps) => (
@@ -43,32 +39,7 @@ const UserInfo = (props: SidebarUserProps) => (
 );
 
 // Component for dropdown menu actions
-const DropdownActions = () => (
-  <>
-    <DropdownMenuGroup>
-      <DropdownMenuItem>
-        <Sparkles />
-        Upgrade to Pro
-      </DropdownMenuItem>
-    </DropdownMenuGroup>
-    <DropdownMenuSeparator />
-    <DropdownMenuGroup>
-      <DropdownMenuItem>
-        <BadgeCheck />
-        Account
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <CreditCard />
-        Billing
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <Bell />
-        Notifications
-      </DropdownMenuItem>
-    </DropdownMenuGroup>
-    <DropdownMenuSeparator />
-  </>
-);
+
 
 export const SidebarUser = (props: SidebarUserProps) => {
   const { isMobile, open } = useSidebar();
@@ -111,7 +82,7 @@ export const SidebarUser = (props: SidebarUserProps) => {
               ) : null}
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownActions />
+            {props.actions ? <DropdownMenuGroup items={props.actions} /> : null}
             <DropdownMenuItem>
               <LogOut />
               Log out

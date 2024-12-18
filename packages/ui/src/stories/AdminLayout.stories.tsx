@@ -2,12 +2,12 @@ import type { Meta, StoryObj } from "@storybook/react";
 // import { expect, userEvent, within } from '@storybook/test';
 
 import AdminLayout from "@/components/layouts/admin";
-import { DropdownGroupProps } from "@/components/types/dropdown-menu-props";
+import { DropdownMenuGroupProps } from "@/components/types/dropdown-menu-group-props";
 import { SidebarMenuItemProps } from "@/components/types/sidebar-menu-item-props";
 import { SidebarUserProps } from "@/components/types/sidebar-user-props";
 import { SidebarLogo } from "@/components/widgets/sidebar-logo";
 import { SidebarUser } from "@/components/widgets/sidebar-user";
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { BadgeCheck, Calendar, Home, Inbox, Search, Settings, Sparkles } from "lucide-react";
 
 const meta: Meta<typeof AdminLayout> = {
   title: "Sidebar",
@@ -64,10 +64,33 @@ const items: SidebarMenuItemProps[] = [
   },
 ];
 
-const userActions: DropdownGroupProps[] = [
+const userActions: DropdownMenuGroupProps[] = [
   {
     type: "item",
+    items: [
+      {
+        type: "item",
+        icon: Sparkles,
+        label: "Upgrade",
+        url: "#",
+      },
+    ],
   },
+  {
+    type: "separator",
+
+  },
+  {
+    type: "item",
+    items: [
+      {
+        type: "item",
+        icon: BadgeCheck,
+        label: "Account",
+        url: "#"
+      }
+    ]
+  }
 ];
 
 export const Default: Story = {
@@ -77,6 +100,7 @@ export const Default: Story = {
       footer: <span>footer</span>,
       menu: [
         {
+          type: "item",
           label: "Application",
           items: items,
           isCollapsible: true,
@@ -89,6 +113,7 @@ export const Default: Story = {
 const user: SidebarUserProps = {
   name: "Doofus",
   email: "test@example.com",
+  actions: userActions,
 };
 
 export const Standard: Story = {
@@ -98,6 +123,7 @@ export const Standard: Story = {
       footer: <SidebarUser {...user} />,
       menu: [
         {
+          type: "item",
           label: "Application",
           items: items,
           isCollapsible: true,
