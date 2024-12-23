@@ -1,38 +1,15 @@
 # Kantor
 
+> UI Framework built using [Hybrids](hybrids.js.org/) aimed for assisting **_admin-page_** builders.
 
-## Contributing
+## But why ?
 
+Yes, why ? we have [React](), [Vue](), [Solid](), [Astro](), [Svelte](), [Angular](), and many more \*-the list goes on and we doesn't have the energy to mention every single `front-end frameworks` out there.
 
-### 1. Pick a Quest (Issue/Discussion)
-- Choose an [issue](#) or create your own. Make sure it aligns with the project's epic roadmap!
+But one day, as we _-the initial contributors-_ hangout and chat, we apparently found a case where we have different projects with different frameworks but need the same component... `<SocialMediaButtons>`.
 
-### 2. Clone the Repository and make a new branch 🪜
-- Clone the repository to begin your coding adventure.
+Yes, most frameworks has that component and it's not that hard to build one ourselves, but as we are `self-proclaimed-programmers` we are lazy. We are **so lazy** that we decided to build our own **UI Framework-ish using web component**.
 
-### 3. Assemble Your Tools 🔧
-Before you embark on this journey, ensure you're equipped with the right tools:
+## General Mentions
 
-#### The Essentials:
-<!-- - **[Moon](https://moonrepo.dev/):** Our trusty multi-language monorepo guide. 🚀   -->
-<!-- - **[Podman](https://podman.io/):** To manage your local development and hosting like a pro. 🐋   -->
-- **[NodeJS](https://nodejs.org):** Only if you're working on the documentation or frontend! (Hey, someone's gotta make it pretty, right?) ✍️  
-<!-- - **[Rust](https://www.rust-lang.org/):** Because, duh. 🦀 (Don't forget, you can install Moon with [Proto](https://moonrepo.dev/proto).) -->
-
-#### The Optionals (a.k.a. Fun Stuff):  
-<!-- - **[FireBDG](https://firedbg.sea-ql.org/install/):** To visualize and debug Rust with some firepower. 🔥   -->
-- **[Gitmoji](https://github.com/carloscuesta/gitmoji-cli):** Because commits should be as cute as kittens. 🐱
-
-### 4. Cook Up Your PR 🍳
-Write the most magical pull request for the issue(s) you're working on.
-
-If you want to preview the changes on the `ui` package then you just have to run `npx turbo storybook`
-
-### 5. Submit & Shine! ✨
-Follow the designated PR format, then patiently await feedback. (We promise we're nice!) 😊  
-
-### 6. Celebrate or Revise 🎉🔄
-Once approved, rejoice! If revisions are needed, tackle them like a champ. 🏆
-
-### 7. (Optional) Update the Changelog 🗓️
-Not mandatory, but it helps future adventurers follow the path you've blazed.
+- @cfjedimaster for his article [here](https://www.raymondcamden.com/2023/06/02/using-web-components-in-alpine).
