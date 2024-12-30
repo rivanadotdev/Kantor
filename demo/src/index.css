@@ -1,19 +1,26 @@
 @import "tailwindcss";
+@import "./assets/css/colors/wine.css";
+@import "./assets/css/colors/deep-blue.css";
+@import "./assets/css/colors/deep-ocean.css";
+@import "./assets/css/colors/sky.css";
 
 @theme {
-  --kantor-text-primary: oklch(0.99 0 0);
-  --kantor-text-secondary: oklch(0.98 0.04 113.22);
-  --kantor-text-tertiary: oklch(0.94 0.11 115.03);
-  --kantor-background-primary: oklch(0.92 0.19 114.08);
-  --kantor-background-secondary: oklch(0.84 0.18 117.33);
-  --kantor-background-tertiary: oklch(0.53 0.12 118.34);
+  /* Kantor Config */
+  --kantor-text-color-primary: oklch(0.99 0 0);
+  --kantor-text-color-secondary: oklch(0.98 0.04 113.22);
+  --kantor-text-color-tertiary: oklch(0.94 0.11 115.03);
+  --kantor-background-color-primary: oklch(0.92 0.19 114.08);
+  --kantor-background-color-secondary: oklch(0.84 0.18 117.33);
+  --kantor-background-color-tertiary: oklch(0.53 0.12 118.34);
 
   /* Header */
   --kantor-header-background-main: var(---kantor-background-primary);
-  --kantor-header-background-left: var(--kantor-background-primary);
-  --kantor-header-background-right: var(--kantor-background-primary);
-  --kantor-header-text-left: var(--kantor-text-primary);
-  --kantor-header-text-right: var(--kantor-text-primary);
+  --kantor-header-background-left-slot: var(--kantor-background-secondary);
+  --kantor-header-background-right-slot: var(--kantor-background-secondary);
+  --kantor-header-padding-horizontal: 3rem;
+  --kantor-header-padding-vertical: 2rem;
+  --kantor-header-text-color-left-slot: var(--kantor-text-primary);
+  --kantor-header-text-color-right-slot: var(--kantor-text-primary);
 
   /* Sidebar */
 }

@@ -1,0 +1,13 @@
+:root {
+  /* Deep Ocean (Dark Teal-Blue) */
+  --deep-ocean-50: oklch(0.85 0.03 210);
+  --deep-ocean-100: oklch(0.75 0.05 210);
+  --deep-ocean-200: oklch(0.65 0.07 210);
+  --deep-ocean-300: oklch(0.55 0.08 210);
+  --deep-ocean-400: oklch(0.4 0.09 210);
+  --deep-ocean-500: oklch(0.25 0.1 210); /* Base */
+  --deep-ocean-600: oklch(0.2 0.1 210);
+  --deep-ocean-700: oklch(0.15 0.09 210);
+  --deep-ocean-800: oklch(0.1 0.08 210);
+  --deep-ocean-900: oklch(0.05 0.05 210);
+}

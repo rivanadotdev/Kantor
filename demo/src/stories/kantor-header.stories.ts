@@ -7,6 +7,7 @@ import { createHTMLFragment } from "../utils/create-html-fragment";
 type ComponentProps = {
   "left-slot": string;
   "right-slot": string;
+  "button-slot": string;
 } & KantorHeader;
 
 const meta = {
@@ -20,6 +21,15 @@ const meta = {
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "" },
+      },
+    },
+    "button-slot": {
+      control: "text", // Slot-specific control
+      description: "Content for the 'left' slot",
+      table: {
+        category: "Slots",
+        type: { summary: "HTMLElement" },
+        defaultValue: { summary: "null" },
       },
     },
     "left-slot": {
@@ -50,11 +60,13 @@ type Story = StoryObj<ComponentProps>;
 export const Default: Story = {
   args: {
     className: "custom-header",
-    "left-slot": "<p slot='left'>adsa</p>",
-    "right-slot": "<p slot='right'>dsajdsalkdsajlkdas<p>",
+    "button-slot": "",
+    "left-slot": "<p slot='left-slot'>This is the left slot</p>",
+    "right-slot": "<p slot='right-slot'>This is the right slot<p>",
   },
   render: (args) => {
     const base = html` <kantor-header class=${args.className}>
+      ${createHTMLFragment(args["button-slot"])}
       ${createHTMLFragment(args["left-slot"])}
       ${createHTMLFragment(args["right-slot"])}
     </kantor-header>`;
